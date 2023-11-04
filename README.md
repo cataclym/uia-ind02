@@ -1,5 +1,5 @@
 # uia-ind02
-
+### Ole Hagberg
 ## Oppgave Progoblig 02 - Ind02
 
 ### a) 
