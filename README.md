@@ -17,7 +17,7 @@ kWh-wealthy-consumer-data =
 kWh-wealthy-consumer-data
 ```
 
-b)
+### b)
 ```arr
 include shared-gdrive(
   "dcic-2021",
@@ -35,7 +35,7 @@ where:
 end
 ```
 
-c)
+### c)
 
 ```arr
 include shared-gdrive(
@@ -67,7 +67,8 @@ transform-column(kWh-wealthy-consumer-data, "energi", energi-to-number)
 
 ```
 
-d) Med utgangspunkt i en typisk Nordmann som kjører 37.6km hver dag så er det totale energiforbruket 186kWh/dag. 
+### d) 
+Med utgangspunkt i en typisk Nordmann som kjører 37.6km hver dag så er det totale energiforbruket 186kWh/dag. 
 
 ```arr
 include shared-gdrive(
@@ -122,9 +123,11 @@ total-energiforbruk = sum(ny-tabell, "energi")
 "Totalt energiforbruk for en typisk Nordmann er " + num-to-string(total-energiforbruk) + "kWh/dag."
 ```
 
-e) I energi-to-number så kunne man returnert bil-energi istede for 0, men da hadde ikke funksjonen fungert riktig på andre tabeller.
+### e) 
+I energi-to-number så kunne man returnert bil-energi istede for 0, men da hadde ikke funksjonen fungert riktig på andre tabeller.
 
-![Tabell](Screenshot_20231104_211703.png "Title")
+![Tabell](https://nextcloud.libernets.org/s/emrxwesdFGqGRyY/download/Screenshot_20231104_211703.png "Title")
+
 
 ```arr
 include shared-gdrive(
@@ -178,3 +181,4 @@ total-energiforbruk = sum(ny-tabell, "energi")
 
 bar-chart(ny-tabell, "komponent", "energi")
 ```
+
