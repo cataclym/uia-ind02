@@ -45,8 +45,8 @@ ny-tabell = [table-from-columns:
   {"energi"; energi-kolonne}
 ]
 
-ny-tabell
+total-energiforbruk = sum(ny-tabell, "energi")
 
+"Totalt energiforbruk for en typisk Nordmann er " + num-to-string(total-energiforbruk) + "kWh/dag."
 
-
-
+bar-chart(ny-tabell, "komponent", "energi")
